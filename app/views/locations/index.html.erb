@@ -1,0 +1,12 @@
+<h1>My Location Demo</h1>
+<table>
+<% for @location in @locations %>
+	<tr>
+		<td><%= link_to @location.name, location_url(@location) %></td>
+		<td><%= button_to "Edit", edit_location_url(@location), {:method => :get } %></td>
+		<td><%= button_to "Remove", location_url(@location), {:method => :delete} %></td>
+	</tr>
+<% end %>	
+</table>
+<br /><br />
+<%= link_to "New", new_location_url %>

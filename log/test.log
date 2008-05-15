@@ -1,0 +1,1998 @@
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 08:22:02) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 08:24:48) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000714)[0m   [0;1mSELECT * FROM locations [0m
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 08:33:21) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000757)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+ERROR: compiling _run_erb_47app47views47locations47index46html46erb RAISED compile error
+/Users/johnsonch/Documents/rails/google_map_demo/app/views/locations/index.html.erb:3: syntax error, unexpected ')', expecting kDO_COND or ':' or '\n' or ';'
+_erbout.concat(( for @location in @locations ).to_s); _erbout.concat "\n"
+                                              ^
+/Users/johnsonch/Documents/rails/google_map_demo/app/views/locations/index.html.erb:11: syntax error, unexpected kEND, expecting $end
+Function body: def _run_erb_47app47views47locations47index46html46erb(local_assigns)
+_erbout = ''; _erbout.concat "<h1>My Location Demo</h1>\n"
+_erbout.concat "<table>\n"
+_erbout.concat(( for @location in @locations ).to_s); _erbout.concat "\n"
+_erbout.concat "\t<tr>\n"
+_erbout.concat "\t\t<td>"; _erbout.concat(( link_to @location.name, location_url(@location) ).to_s); _erbout.concat "</td>\n"
+_erbout.concat "\t\t<td>"; _erbout.concat(( button_to "Edit", edit_location_url(@location) ).to_s); _erbout.concat "</td>\n"
+_erbout.concat "\t\t<td>"; _erbout.concat(( button_to "Remove", location_url(@location), {:method => :delete} ).to_s); _erbout.concat "\n"
+_erbout.concat "\t</tr>\n"
+ end ; _erbout.concat "\t\n"
+_erbout.concat "</table>"; _erbout
+end
+Backtrace: /Users/johnsonch/Documents/rails/google_map_demo/app/views/locations/index.html.erb:11:in `compile_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:630:in `compile_and_render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:152:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:152:in `respond'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/johnsonch/Documents/rails/google_map_demo/app/controllers/locations_controller.rb:6:in `index'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process_without_test'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/test_process.rb:15:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/test_process.rb:393:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/test_process.rb:364:in `get'
+/Users/johnsonch/Documents/rails/google_map_demo/test/functional/locations_controller_test.rb:5:in `test_should_list_locations'
+/opt/local/lib/ruby/1.8/test/unit/testcase.rb:78:in `__send__'
+/opt/local/lib/ruby/1.8/test/unit/testcase.rb:78:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/testing/default.rb:7:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/opt/local/lib/ruby/1.8/test/unit/ui/testrunnermediator.rb:46:in `run_suite'
+/opt/local/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:67:in `start_mediator'
+/opt/local/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:41:in `start'
+/opt/local/lib/ruby/1.8/test/unit/ui/testrunnerutilities.rb:29:in `run'
+/opt/local/lib/ruby/1.8/test/unit/autorunner.rb:216:in `run'
+/opt/local/lib/ruby/1.8/test/unit/autorunner.rb:12:in `run'
+/opt/local/lib/ruby/1.8/test/unit.rb:278
+/Users/johnsonch/Documents/rails/google_map_demo/test/functional/locations_controller_test.rb:4
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 08:33:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000709)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00740 (135 reqs/sec) | Rendering: 0.00337 (45%) | DB: 0.00071 (9%) | 200 OK [http://test.host/locations]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 08:40:35) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000655)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00705 (141 reqs/sec) | Rendering: 0.00340 (48%) | DB: 0.00065 (9%) | 200 OK [http://test.host/locations]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 08:40:35) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00194)
+Completed in 0.00468 (213 reqs/sec) | Rendering: 0.00421 (89%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 08:45:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000772)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00863 (115 reqs/sec) | Rendering: 0.00378 (43%) | DB: 0.00077 (8%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000452)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 08:45:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+Rendering locations/edit
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 08:45:05) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00193)
+Completed in 0.00437 (228 reqs/sec) | Rendering: 0.00400 (91%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 08:46:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000773)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00963 (103 reqs/sec) | Rendering: 0.00463 (48%) | DB: 0.00077 (8%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000659)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 08:46:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000598)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00224)
+Completed in 0.00693 (144 reqs/sec) | Rendering: 0.00507 (73%) | DB: 0.00126 (18%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 08:46:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00072)
+Completed in 0.00344 (290 reqs/sec) | Rendering: 0.00307 (89%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 08:48:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000675)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00745 (134 reqs/sec) | Rendering: 0.00351 (47%) | DB: 0.00067 (9%) | 200 OK [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 08:48:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000305)[0m   [0mSELECT * FROM locations WHERE (locations."id" IS NULL) LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11d51b8 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00145 (688 reqs/sec) | DB: 0.00030 (20%) | 302 Found [http://test.host/locations/edit]
+  [4;36;1mLocation Load (0.000528)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 08:48:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000492)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00186)
+Completed in 0.00541 (184 reqs/sec) | Rendering: 0.00435 (80%) | DB: 0.00102 (18%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 08:48:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00065)
+Completed in 0.04912 (20 reqs/sec) | Rendering: 0.04874 (99%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 08:50:50) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000846)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00952 (105 reqs/sec) | Rendering: 0.00452 (47%) | DB: 0.00085 (8%) | 200 OK [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 08:50:50) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000854)[0m   [0mSELECT * FROM locations WHERE (locations."id" IS NULL) LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x17948ec @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00201 (498 reqs/sec) | DB: 0.00085 (42%) | 302 Found [http://test.host/locations/edit]
+  [4;36;1mLocation Load (0.000528)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 08:50:50) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000447)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00206)
+Completed in 0.00542 (184 reqs/sec) | Rendering: 0.00435 (80%) | DB: 0.00097 (17%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 08:50:50) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00068)
+Completed in 0.00310 (322 reqs/sec) | Rendering: 0.00271 (87%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 08:51:03) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000664)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00752 (132 reqs/sec) | Rendering: 0.00342 (45%) | DB: 0.00066 (8%) | 200 OK [http://test.host/locations]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 08:51:03) [GET]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 08:51:03) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000279)[0m   [0mSELECT * FROM locations WHERE (locations."id" IS NULL) LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x17930dc @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00114 (877 reqs/sec) | DB: 0.00028 (24%) | 302 Found [http://test.host/locations/edit]
+  [4;36;1mLocation Load (0.000494)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 08:51:03) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000433)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00222)
+Completed in 0.00537 (186 reqs/sec) | Rendering: 0.00439 (81%) | DB: 0.00093 (17%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 08:51:03) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00069)
+Completed in 0.00371 (269 reqs/sec) | Rendering: 0.00318 (85%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 08:52:35) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000709)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00795 (125 reqs/sec) | Rendering: 0.00368 (46%) | DB: 0.00071 (8%) | 200 OK [http://test.host/locations]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 08:52:35) [GET]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00041 (2432 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 08:52:35) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000312)[0m   [0mSELECT * FROM locations WHERE (locations."id" IS NULL) LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x1792934 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00151 (663 reqs/sec) | DB: 0.00031 (20%) | 302 Found [http://test.host/locations/edit]
+  [4;36;1mLocation Load (0.000435)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 08:52:35) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000430)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00170)
+Completed in 0.00490 (203 reqs/sec) | Rendering: 0.00374 (76%) | DB: 0.00087 (17%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 08:52:35) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00068)
+Completed in 0.00321 (311 reqs/sec) | Rendering: 0.00290 (90%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 08:53:45) [GET]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 08:53:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000705)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00916 (109 reqs/sec) | Rendering: 0.00436 (47%) | DB: 0.00071 (7%) | 200 OK [http://test.host/locations]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 08:53:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00036 (2801 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 08:53:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000305)[0m   [0mSELECT * FROM locations WHERE (locations."id" IS NULL) LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x17939d8 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00135 (740 reqs/sec) | DB: 0.00030 (22%) | 302 Found [http://test.host/locations/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 08:53:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000461)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 08:53:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000424)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00198)
+Completed in 0.00540 (185 reqs/sec) | Rendering: 0.00429 (79%) | DB: 0.00089 (16%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 08:53:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00071)
+Completed in 0.00319 (313 reqs/sec) | Rendering: 0.00289 (90%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 08:54:27) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000588)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00688 (145 reqs/sec) | Rendering: 0.00329 (47%) | DB: 0.00059 (8%) | 200 OK [http://test.host/locations]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 08:54:27) [GET]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00039 (2557 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 08:54:27) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000276)[0m   [0mSELECT * FROM locations WHERE (locations."id" IS NULL) LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x1793834 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00112 (892 reqs/sec) | DB: 0.00028 (24%) | 302 Found [http://test.host/locations/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 08:54:27) [GET]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00200)
+Completed in 0.00436 (229 reqs/sec) | Rendering: 0.00409 (93%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;36;1mLocation Load (0.000623)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 08:54:27) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000429)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00065)
+Completed in 0.00387 (258 reqs/sec) | Rendering: 0.00282 (72%) | DB: 0.00105 (27%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 08:54:27) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00110)
+Completed in 0.00268 (373 reqs/sec) | Rendering: 0.00236 (88%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:01:34) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000802)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00877 (113 reqs/sec) | Rendering: 0.00397 (45%) | DB: 0.00080 (9%) | 200 OK [http://test.host/locations]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:01:34) [GET]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00044 (2278 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:01:34) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000313)[0m   [0mSELECT * FROM locations WHERE (locations."id" IS NULL) LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x1793834 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00287 (349 reqs/sec) | DB: 0.00031 (10%) | 302 Found [http://test.host/locations/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:01:34) [GET]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00175)
+Completed in 0.00488 (204 reqs/sec) | Rendering: 0.00389 (79%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;36;1mLocation Load (0.000617)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:01:34) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000371)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00067)
+Completed in 0.00361 (276 reqs/sec) | Rendering: 0.00271 (75%) | DB: 0.00099 (27%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:01:34) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00062)
+Completed in 0.00240 (417 reqs/sec) | Rendering: 0.00164 (68%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:06:07) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000731)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00810 (123 reqs/sec) | Rendering: 0.00363 (44%) | DB: 0.00073 (9%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000502)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:06:07) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:06:07) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00042 (2385 reqs/sec) | DB: 0.00050 (119%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:06:07) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00202)
+Completed in 0.00491 (203 reqs/sec) | Rendering: 0.00463 (94%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;36;1mLocation Load (0.000453)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:06:07) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000421)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00070)
+Completed in 0.00448 (223 reqs/sec) | Rendering: 0.00315 (70%) | DB: 0.00087 (19%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:06:07) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00069)
+Completed in 0.00211 (474 reqs/sec) | Rendering: 0.00180 (85%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:08:34) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000750)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00816 (122 reqs/sec) | Rendering: 0.00380 (46%) | DB: 0.00075 (9%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000527)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:08:34) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:08:34) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00038 (2610 reqs/sec) | DB: 0.00053 (137%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:08:34) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00205)
+Completed in 0.00480 (208 reqs/sec) | Rendering: 0.00450 (93%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;36;1mLocation Load (0.000690)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:08:34) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000408)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00070)
+Completed in 0.00420 (238 reqs/sec) | Rendering: 0.00284 (67%) | DB: 0.00110 (26%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:08:34) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00067)
+Completed in 0.00240 (416 reqs/sec) | Rendering: 0.00176 (73%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:09:19) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000828)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00946 (105 reqs/sec) | Rendering: 0.00399 (42%) | DB: 0.00083 (8%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000451)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:09:19) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:09:19) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00040 (2513 reqs/sec) | DB: 0.00045 (113%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:09:19) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000286)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11fce48 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00117 (851 reqs/sec) | DB: 0.00029 (24%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:09:19) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00210)
+Completed in 0.00510 (195 reqs/sec) | Rendering: 0.00483 (94%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000460)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:09:19) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000429)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00067)
+Completed in 0.00393 (254 reqs/sec) | Rendering: 0.00287 (73%) | DB: 0.00089 (22%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:09:19) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00070)
+Completed in 0.00244 (410 reqs/sec) | Rendering: 0.00214 (87%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:09:48) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000788)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00871 (114 reqs/sec) | Rendering: 0.00399 (45%) | DB: 0.00079 (9%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000477)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:09:48) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:09:48) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00051 (1952 reqs/sec) | DB: 0.00048 (93%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:09:48) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000281)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11fce48 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00115 (871 reqs/sec) | DB: 0.00028 (24%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:09:48) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00189)
+Completed in 0.00442 (226 reqs/sec) | Rendering: 0.00382 (86%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000452)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:09:48) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000432)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00070)
+Completed in 0.00567 (176 reqs/sec) | Rendering: 0.00473 (83%) | DB: 0.00088 (15%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:09:48) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00070)
+Completed in 0.00252 (397 reqs/sec) | Rendering: 0.00187 (74%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+  [4;35;1mSQL (0.000456)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:10:09) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000705)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00860 (116 reqs/sec) | Rendering: 0.00427 (49%) | DB: 0.00071 (8%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000497)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:10:09) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:10:09) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00045 (2198 reqs/sec) | DB: 0.00050 (109%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:10:09) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000401)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11fce48 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00301 (332 reqs/sec) | DB: 0.00040 (13%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:10:09) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00186)
+Completed in 0.00415 (241 reqs/sec) | Rendering: 0.00389 (93%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000455)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:10:09) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000485)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00068)
+Completed in 0.00410 (243 reqs/sec) | Rendering: 0.00299 (72%) | DB: 0.00094 (22%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:10:09) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00066)
+Completed in 0.00195 (512 reqs/sec) | Rendering: 0.00166 (85%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+  [4;35;1mSQL (0.001846)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:10:21) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000725)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00777 (128 reqs/sec) | Rendering: 0.00349 (44%) | DB: 0.00073 (9%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000459)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:10:21) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000444)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:10:21) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00043 (2352 reqs/sec) | DB: 0.00090 (212%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:10:21) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000356)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11fce20 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00098 (1019 reqs/sec) | DB: 0.00036 (36%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:10:21) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00245)
+Completed in 0.00635 (157 reqs/sec) | Rendering: 0.00609 (95%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;36;1mLocation Load (0.000493)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:10:21) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000529)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00070)
+Completed in 0.00422 (237 reqs/sec) | Rendering: 0.00306 (72%) | DB: 0.00102 (24%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:10:21) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00114)
+Completed in 0.00270 (370 reqs/sec) | Rendering: 0.00229 (84%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+  [4;36;1mSQL (0.000368)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:10:52) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000591)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00685 (146 reqs/sec) | Rendering: 0.00324 (47%) | DB: 0.00059 (8%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000459)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:10:52) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.001099)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Redirected to http://test.host/locations
+Completed in 0.00223 (447 reqs/sec) | DB: 0.00156 (69%) | 302 Found [http://test.host/locations/335569437]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:10:52) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00041 (2445 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:10:52) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000453)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11fce34 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00116 (859 reqs/sec) | DB: 0.00045 (38%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:10:52) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00180)
+Completed in 0.00412 (242 reqs/sec) | Rendering: 0.00383 (92%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;36;1mLocation Load (0.000804)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:10:52) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000373)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00068)
+Completed in 0.00388 (258 reqs/sec) | Rendering: 0.00296 (76%) | DB: 0.00118 (30%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:10:52) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00067)
+Completed in 0.00208 (480 reqs/sec) | Rendering: 0.00176 (84%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:11:17) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.001462)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00899 (111 reqs/sec) | Rendering: 0.00376 (41%) | DB: 0.00146 (16%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000470)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:11:17) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000444)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Redirected to http://test.host/locations
+Completed in 0.00149 (669 reqs/sec) | DB: 0.00091 (61%) | 302 Found [http://test.host/locations/335569437]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:11:17) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00040 (2519 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:11:17) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000268)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11fce98 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00089 (1129 reqs/sec) | DB: 0.00027 (30%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:11:17) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00182)
+Completed in 0.00417 (239 reqs/sec) | Rendering: 0.00390 (93%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;36;1mLocation Load (0.000458)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:11:17) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000415)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00070)
+Completed in 0.00413 (242 reqs/sec) | Rendering: 0.00308 (74%) | DB: 0.00087 (21%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:11:17) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00071)
+Completed in 0.00353 (283 reqs/sec) | Rendering: 0.00322 (91%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:13:22) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000602)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00679 (147 reqs/sec) | Rendering: 0.00322 (47%) | DB: 0.00060 (8%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000603)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#destroy (for 0.0.0.0 at 2008-05-13 09:13:22) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000652)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:13:22) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000479)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Redirected to http://test.host/locations
+Completed in 0.00211 (473 reqs/sec) | DB: 0.00173 (82%) | 302 Found [http://test.host/locations/335569437]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:13:22) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00041 (2462 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:13:22) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000242)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11fc86c @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00074 (1342 reqs/sec) | DB: 0.00024 (32%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:13:22) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00190)
+Completed in 0.00445 (224 reqs/sec) | Rendering: 0.00417 (93%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000398)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:13:22) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000331)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00100)
+Completed in 0.00390 (256 reqs/sec) | Rendering: 0.00306 (78%) | DB: 0.00073 (18%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:13:22) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00062)
+Completed in 0.00188 (532 reqs/sec) | Rendering: 0.00160 (84%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:14:27) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000746)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00779 (128 reqs/sec) | Rendering: 0.00341 (43%) | DB: 0.00075 (9%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000455)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#destroy (for 0.0.0.0 at 2008-05-13 09:14:27) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000568)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:14:27) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000488)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Redirected to http://test.host/locations
+Completed in 0.00227 (439 reqs/sec) | DB: 0.00151 (66%) | 302 Found [http://test.host/locations/335569437]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:14:27) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00039 (2545 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:14:27) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000272)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11fc498 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00087 (1145 reqs/sec) | DB: 0.00027 (31%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:14:27) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00208)
+Completed in 0.00456 (219 reqs/sec) | Rendering: 0.00424 (92%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000508)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:14:27) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000420)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00066)
+Completed in 0.00377 (265 reqs/sec) | Rendering: 0.00274 (72%) | DB: 0.00093 (24%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:14:27) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00067)
+Completed in 0.00217 (460 reqs/sec) | Rendering: 0.00184 (84%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:14:45) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000634)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00812 (123 reqs/sec) | Rendering: 0.00335 (41%) | DB: 0.00063 (7%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000472)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#destroy (for 0.0.0.0 at 2008-05-13 09:14:45) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000464)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+  [4;35;1mLocation Destroy (0.000658)[0m   [0m DELETE FROM locations
+ WHERE "id" = 335569437
+[0m
+Redirected to http://test.host/locations
+Completed in 0.00248 (403 reqs/sec) | DB: 0.00159 (64%) | 302 Found [http://test.host/locations/335569437]
+  [4;36;1mLocation Load (0.000489)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:14:45) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000974)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Redirected to http://test.host/locations
+Completed in 0.00173 (576 reqs/sec) | DB: 0.00146 (84%) | 302 Found [http://test.host/locations/335569437]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:14:45) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00039 (2565 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:14:45) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000772)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11fc470 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00138 (722 reqs/sec) | DB: 0.00077 (55%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:14:45) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00199)
+Completed in 0.00616 (162 reqs/sec) | Rendering: 0.00589 (95%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000586)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:14:45) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000357)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00069)
+Completed in 0.00368 (271 reqs/sec) | Rendering: 0.00281 (76%) | DB: 0.00094 (25%) | 200 OK [http://test.host/locations/335569437/edit]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:14:45) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00067)
+Completed in 0.00215 (464 reqs/sec) | Rendering: 0.00179 (82%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:18:07) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000729)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00786 (127 reqs/sec) | Rendering: 0.00362 (46%) | DB: 0.00073 (9%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000473)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#destroy (for 0.0.0.0 at 2008-05-13 09:18:07) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000503)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+  [4;35;1mLocation Destroy (0.000425)[0m   [0m DELETE FROM locations
+ WHERE "id" = 335569437
+[0m
+Redirected to http://test.host/locations
+Completed in 0.00239 (418 reqs/sec) | DB: 0.00140 (58%) | 302 Found [http://test.host/locations/335569437]
+  [4;36;1mLocation Load (0.000489)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:18:07) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000418)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Redirected to http://test.host/locations
+Completed in 0.00131 (765 reqs/sec) | DB: 0.00091 (69%) | 302 Found [http://test.host/locations/335569437]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:18:07) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00036 (2746 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:18:07) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000278)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11e5e8c @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00135 (741 reqs/sec) | DB: 0.00028 (20%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:18:07) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00185)
+Completed in 0.00407 (245 reqs/sec) | Rendering: 0.00381 (93%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000451)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:18:07) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000413)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00072)
+Completed in 0.00452 (221 reqs/sec) | Rendering: 0.00311 (68%) | DB: 0.00086 (19%) | 200 OK [http://test.host/locations/335569437/edit]
+  [4;35;1mLocation Load (0.000447)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#show (for 0.0.0.0 at 2008-05-13 09:18:07) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000414)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/show
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:18:07) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00067)
+Completed in 0.00210 (475 reqs/sec) | Rendering: 0.00180 (85%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:19:46) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000765)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00837 (119 reqs/sec) | Rendering: 0.00404 (48%) | DB: 0.00077 (9%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000549)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#destroy (for 0.0.0.0 at 2008-05-13 09:19:46) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000468)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+  [4;35;1mLocation Destroy (0.000439)[0m   [0m DELETE FROM locations
+ WHERE "id" = 335569437
+[0m
+Redirected to http://test.host/locations
+Completed in 0.00222 (450 reqs/sec) | DB: 0.00146 (65%) | 302 Found [http://test.host/locations/335569437]
+  [4;36;1mLocation Load (0.000493)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:19:46) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000424)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Redirected to http://test.host/locations
+Completed in 0.00136 (733 reqs/sec) | DB: 0.00092 (67%) | 302 Found [http://test.host/locations/335569437]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:19:46) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00037 (2732 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:19:46) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000251)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11e6800 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00084 (1194 reqs/sec) | DB: 0.00025 (29%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:19:46) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00219)
+Completed in 0.00438 (228 reqs/sec) | Rendering: 0.00413 (94%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000442)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:19:46) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000364)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00070)
+Completed in 0.00370 (270 reqs/sec) | Rendering: 0.00277 (74%) | DB: 0.00081 (21%) | 200 OK [http://test.host/locations/335569437/edit]
+  [4;35;1mLocation Load (0.000465)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 422094564) [0m
+
+
+Processing LocationsController#show (for 0.0.0.0 at 2008-05-13 09:19:46) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"422094564", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000411)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '422094564') LIMIT 1[0m
+Rendering locations/show
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:19:46) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00070)
+Completed in 0.00221 (453 reqs/sec) | Rendering: 0.00190 (86%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:20:55) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000752)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00824 (121 reqs/sec) | Rendering: 0.00373 (45%) | DB: 0.00075 (9%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000454)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#destroy (for 0.0.0.0 at 2008-05-13 09:20:55) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000473)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+  [4;35;1mLocation Destroy (0.000477)[0m   [0m DELETE FROM locations
+ WHERE "id" = 335569437
+[0m
+Redirected to http://test.host/locations
+Completed in 0.00226 (442 reqs/sec) | DB: 0.00140 (62%) | 302 Found [http://test.host/locations/335569437]
+  [4;36;1mLocation Load (0.000450)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:20:55) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000325)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Redirected to http://test.host/locations
+Completed in 0.00090 (1113 reqs/sec) | DB: 0.00078 (86%) | 302 Found [http://test.host/locations/335569437]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:20:55) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00028 (3581 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:20:55) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000227)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11e6800 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00072 (1382 reqs/sec) | DB: 0.00023 (31%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:20:55) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00191)
+Completed in 0.00455 (219 reqs/sec) | Rendering: 0.00425 (93%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000802)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:20:55) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000438)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00066)
+Completed in 0.00382 (262 reqs/sec) | Rendering: 0.00277 (72%) | DB: 0.00124 (32%) | 200 OK [http://test.host/locations/335569437/edit]
+  [4;35;1mLocation Load (0.000501)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 422094564) [0m
+
+
+Processing LocationsController#show (for 0.0.0.0 at 2008-05-13 09:20:55) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"422094564", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000411)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '422094564') LIMIT 1[0m
+Rendering locations/show
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:20:55) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00067)
+Completed in 0.00197 (506 reqs/sec) | Rendering: 0.00169 (85%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:21:22) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000735)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00843 (118 reqs/sec) | Rendering: 0.00391 (46%) | DB: 0.00074 (8%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000467)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#destroy (for 0.0.0.0 at 2008-05-13 09:21:22) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000465)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+  [4;35;1mLocation Destroy (0.000427)[0m   [0m DELETE FROM locations
+ WHERE "id" = 335569437
+[0m
+Redirected to http://test.host/locations
+Completed in 0.00216 (462 reqs/sec) | DB: 0.00136 (62%) | 302 Found [http://test.host/locations/335569437]
+  [4;36;1mLocation Load (0.000496)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:21:22) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000413)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Redirected to http://test.host/locations
+Completed in 0.00112 (892 reqs/sec) | DB: 0.00091 (81%) | 302 Found [http://test.host/locations/335569437]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:21:22) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00038 (2652 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:21:22) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000282)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11e6800 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00097 (1028 reqs/sec) | DB: 0.00028 (29%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:21:22) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00225)
+Completed in 0.00451 (221 reqs/sec) | Rendering: 0.00424 (93%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;35;1mLocation Load (0.000495)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:21:22) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000429)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00066)
+Completed in 0.00376 (266 reqs/sec) | Rendering: 0.00272 (72%) | DB: 0.00092 (24%) | 200 OK [http://test.host/locations/335569437/edit]
+  [4;35;1mLocation Load (0.000799)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 422094564) [0m
+
+
+Processing LocationsController#show (for 0.0.0.0 at 2008-05-13 09:21:22) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"422094564", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000543)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '422094564') LIMIT 1[0m
+Rendering locations/show
+Completed in 0.00212 (472 reqs/sec) | Rendering: 0.00095 (45%) | DB: 0.00134 (63%) | 200 OK [http://test.host/locations/422094564]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:21:22) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00065)
+Completed in 0.00220 (455 reqs/sec) | Rendering: 0.00188 (85%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:23:54) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000831)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+ERROR: compiling _run_erb_47app47views47locations47index46html46erb RAISED compile error
+/Users/johnsonch/Documents/rails/google_map_demo/app/views/locations/index.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+_erbout.concat(( link_to "New" new_location_url ).to_s); _erbout
+                                               ^
+Function body: def _run_erb_47app47views47locations47index46html46erb(local_assigns)
+_erbout = ''; _erbout.concat "<h1>My Location Demo</h1>\n"
+_erbout.concat "<table>\n"
+ for @location in @locations ; _erbout.concat "\n"
+_erbout.concat "\t<tr>\n"
+_erbout.concat "\t\t<td>"; _erbout.concat(( link_to @location.name, location_url(@location) ).to_s); _erbout.concat "</td>\n"
+_erbout.concat "\t\t<td>"; _erbout.concat(( button_to "Edit", edit_location_url(@location) ).to_s); _erbout.concat "</td>\n"
+_erbout.concat "\t\t<td>"; _erbout.concat(( button_to "Remove", location_url(@location), {:method => :delete} ).to_s); _erbout.concat "\n"
+_erbout.concat "\t</tr>\n"
+ end ; _erbout.concat "\t\n"
+_erbout.concat "</table>\n"
+_erbout.concat "<br /><br />\n"
+_erbout.concat(( link_to "New" new_location_url ).to_s); _erbout
+end
+Backtrace: /Users/johnsonch/Documents/rails/google_map_demo/app/views/locations/index.html.erb:13:in `compile_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:630:in `compile_and_render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:152:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:152:in `respond'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/johnsonch/Documents/rails/google_map_demo/app/controllers/locations_controller.rb:7:in `index'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process_without_test'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/test_process.rb:15:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/test_process.rb:393:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/test_process.rb:364:in `get'
+/Users/johnsonch/Documents/rails/google_map_demo/test/functional/locations_controller_test.rb:11:in `test_locations_list_should_have_new_location_link'
+/opt/local/lib/ruby/gems/1.8/gems/mocha-0.5.6/lib/mocha/test_case_adapter.rb:19:in `__send__'
+/opt/local/lib/ruby/gems/1.8/gems/mocha-0.5.6/lib/mocha/test_case_adapter.rb:19:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/testing/default.rb:7:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/opt/local/lib/ruby/1.8/test/unit/ui/testrunnermediator.rb:46:in `run_suite'
+/opt/local/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:67:in `start_mediator'
+/opt/local/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:41:in `start'
+/opt/local/lib/ruby/1.8/test/unit/ui/testrunnerutilities.rb:29:in `run'
+/opt/local/lib/ruby/1.8/test/unit/autorunner.rb:216:in `run'
+/opt/local/lib/ruby/1.8/test/unit/autorunner.rb:12:in `run'
+/opt/local/lib/ruby/1.8/test/unit.rb:278
+/Users/johnsonch/Documents/rails/google_map_demo/test/functional/locations_controller_test.rb:55
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:23:54) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000645)[0m   [0mSELECT * FROM locations [0m
+Rendering locations/index
+ERROR: compiling _run_erb_47app47views47locations47index46html46erb RAISED compile error
+/Users/johnsonch/Documents/rails/google_map_demo/app/views/locations/index.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting ')'
+_erbout.concat(( link_to "New" new_location_url ).to_s); _erbout
+                                               ^
+Function body: def _run_erb_47app47views47locations47index46html46erb(local_assigns)
+_erbout = ''; _erbout.concat "<h1>My Location Demo</h1>\n"
+_erbout.concat "<table>\n"
+ for @location in @locations ; _erbout.concat "\n"
+_erbout.concat "\t<tr>\n"
+_erbout.concat "\t\t<td>"; _erbout.concat(( link_to @location.name, location_url(@location) ).to_s); _erbout.concat "</td>\n"
+_erbout.concat "\t\t<td>"; _erbout.concat(( button_to "Edit", edit_location_url(@location) ).to_s); _erbout.concat "</td>\n"
+_erbout.concat "\t\t<td>"; _erbout.concat(( button_to "Remove", location_url(@location), {:method => :delete} ).to_s); _erbout.concat "\n"
+_erbout.concat "\t</tr>\n"
+ end ; _erbout.concat "\t\n"
+_erbout.concat "</table>\n"
+_erbout.concat "<br /><br />\n"
+_erbout.concat(( link_to "New" new_location_url ).to_s); _erbout
+end
+Backtrace: /Users/johnsonch/Documents/rails/google_map_demo/app/views/locations/index.html.erb:13:in `compile_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:630:in `compile_and_render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:152:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:152:in `respond'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/johnsonch/Documents/rails/google_map_demo/app/controllers/locations_controller.rb:7:in `index'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process_without_test'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/test_process.rb:15:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/test_process.rb:393:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/test_process.rb:364:in `get'
+/Users/johnsonch/Documents/rails/google_map_demo/test/functional/locations_controller_test.rb:5:in `test_should_list_locations'
+/opt/local/lib/ruby/gems/1.8/gems/mocha-0.5.6/lib/mocha/test_case_adapter.rb:19:in `__send__'
+/opt/local/lib/ruby/gems/1.8/gems/mocha-0.5.6/lib/mocha/test_case_adapter.rb:19:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/testing/default.rb:7:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/opt/local/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/opt/local/lib/ruby/1.8/test/unit/ui/testrunnermediator.rb:46:in `run_suite'
+/opt/local/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:67:in `start_mediator'
+/opt/local/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:41:in `start'
+/opt/local/lib/ruby/1.8/test/unit/ui/testrunnerutilities.rb:29:in `run'
+/opt/local/lib/ruby/1.8/test/unit/autorunner.rb:216:in `run'
+/opt/local/lib/ruby/1.8/test/unit/autorunner.rb:12:in `run'
+/opt/local/lib/ruby/1.8/test/unit.rb:278
+/Users/johnsonch/Documents/rails/google_map_demo/test/functional/locations_controller_test.rb:55
+  [4;36;1mLocation Load (0.000463)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#destroy (for 0.0.0.0 at 2008-05-13 09:23:54) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000426)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+  [4;36;1mLocation Destroy (0.000337)[0m   [0;1m DELETE FROM locations
+ WHERE "id" = 335569437
+[0m
+Redirected to http://test.host/locations
+Completed in 0.00205 (488 reqs/sec) | DB: 0.00123 (59%) | 302 Found [http://test.host/locations/335569437]
+  [4;35;1mLocation Load (0.000962)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:23:54) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000526)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Redirected to http://test.host/locations
+Completed in 0.00146 (686 reqs/sec) | DB: 0.00149 (102%) | 302 Found [http://test.host/locations/335569437]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:23:54) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00046 (2178 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:23:54) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000307)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11ecbc4 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00091 (1093 reqs/sec) | DB: 0.00031 (33%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:23:54) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00330)
+Completed in 0.00563 (177 reqs/sec) | Rendering: 0.00537 (95%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;36;1mLocation Load (0.000766)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:23:54) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000472)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00071)
+Completed in 0.00417 (239 reqs/sec) | Rendering: 0.00296 (70%) | DB: 0.00124 (29%) | 200 OK [http://test.host/locations/335569437/edit]
+  [4;36;1mLocation Load (0.000511)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 422094564) [0m
+
+
+Processing LocationsController#show (for 0.0.0.0 at 2008-05-13 09:23:54) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"422094564", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000388)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '422094564') LIMIT 1[0m
+Rendering locations/show
+Completed in 0.00184 (542 reqs/sec) | Rendering: 0.00089 (48%) | DB: 0.00090 (48%) | 200 OK [http://test.host/locations/422094564]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:23:54) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00065)
+Completed in 0.00206 (485 reqs/sec) | Rendering: 0.00176 (85%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:24:11) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000878)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00963 (103 reqs/sec) | Rendering: 0.00472 (48%) | DB: 0.00088 (9%) | 200 OK [http://test.host/locations]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:24:11) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000641)[0m   [0mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.04798 (20 reqs/sec) | Rendering: 0.04659 (97%) | DB: 0.00064 (1%) | 200 OK [http://test.host/locations]
+  [4;36;1mLocation Load (0.000482)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#destroy (for 0.0.0.0 at 2008-05-13 09:24:11) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000463)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+  [4;36;1mLocation Destroy (0.000490)[0m   [0;1m DELETE FROM locations
+ WHERE "id" = 335569437
+[0m
+Redirected to http://test.host/locations
+Completed in 0.00252 (397 reqs/sec) | DB: 0.00144 (57%) | 302 Found [http://test.host/locations/335569437]
+  [4;35;1mLocation Load (0.000702)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:24:11) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000638)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Redirected to http://test.host/locations
+Completed in 0.00167 (599 reqs/sec) | DB: 0.00134 (80%) | 302 Found [http://test.host/locations/335569437]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:24:11) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00051 (1972 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:24:11) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000467)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11ecbc4 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00129 (777 reqs/sec) | DB: 0.00047 (36%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:24:11) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00176)
+Completed in 0.00431 (232 reqs/sec) | Rendering: 0.00396 (92%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;36;1mLocation Load (0.000473)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:24:11) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000516)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00068)
+Completed in 0.00412 (242 reqs/sec) | Rendering: 0.00293 (71%) | DB: 0.00099 (24%) | 200 OK [http://test.host/locations/335569437/edit]
+  [4;36;1mLocation Load (0.000471)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 422094564) [0m
+
+
+Processing LocationsController#show (for 0.0.0.0 at 2008-05-13 09:24:11) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"422094564", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000433)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '422094564') LIMIT 1[0m
+Rendering locations/show
+Completed in 0.00218 (458 reqs/sec) | Rendering: 0.00113 (51%) | DB: 0.00090 (41%) | 200 OK [http://test.host/locations/422094564]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:24:11) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00068)
+Completed in 0.00221 (451 reqs/sec) | Rendering: 0.00190 (86%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:24:40) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000624)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00727 (137 reqs/sec) | Rendering: 0.00345 (47%) | DB: 0.00062 (8%) | 200 OK [http://test.host/locations]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:25:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000792)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00903 (110 reqs/sec) | Rendering: 0.00427 (47%) | DB: 0.00079 (8%) | 200 OK [http://test.host/locations]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:25:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000720)[0m   [0mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00494 (202 reqs/sec) | Rendering: 0.00090 (18%) | DB: 0.00072 (14%) | 200 OK [http://test.host/locations]
+  [4;36;1mLocation Load (0.000555)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#destroy (for 0.0.0.0 at 2008-05-13 09:25:06) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000449)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+  [4;36;1mLocation Destroy (0.000362)[0m   [0;1m DELETE FROM locations
+ WHERE "id" = 335569437
+[0m
+Redirected to http://test.host/locations
+Completed in 0.00200 (500 reqs/sec) | DB: 0.00137 (68%) | 302 Found [http://test.host/locations/335569437]
+  [4;35;1mLocation Load (0.000583)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:25:06) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000421)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Redirected to http://test.host/locations
+Completed in 0.00130 (771 reqs/sec) | DB: 0.00100 (77%) | 302 Found [http://test.host/locations/335569437]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:25:06) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00037 (2732 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:25:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000291)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11ecc00 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00086 (1161 reqs/sec) | DB: 0.00029 (33%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:25:06) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00388)
+Completed in 0.00606 (164 reqs/sec) | Rendering: 0.00581 (95%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;36;1mLocation Load (0.000647)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:25:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.047787)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00066)
+Completed in 0.05134 (19 reqs/sec) | Rendering: 0.00280 (5%) | DB: 0.04843 (94%) | 200 OK [http://test.host/locations/335569437/edit]
+  [4;36;1mLocation Load (0.000694)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 422094564) [0m
+
+
+Processing LocationsController#show (for 0.0.0.0 at 2008-05-13 09:25:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"422094564", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000440)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '422094564') LIMIT 1[0m
+Rendering locations/show
+Completed in 0.00218 (458 reqs/sec) | Rendering: 0.00108 (49%) | DB: 0.00113 (52%) | 200 OK [http://test.host/locations/422094564]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:25:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00068)
+Completed in 0.00219 (457 reqs/sec) | Rendering: 0.00187 (85%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:25:30) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000753)[0m   [0;1mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00805 (124 reqs/sec) | Rendering: 0.00336 (41%) | DB: 0.00075 (9%) | 200 OK [http://test.host/locations]
+
+
+Processing LocationsController#index (for 0.0.0.0 at 2008-05-13 09:25:30) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000996)[0m   [0mSELECT * FROM locations [0m
+Rendering locations/index
+Completed in 0.00272 (367 reqs/sec) | Rendering: 0.00105 (38%) | DB: 0.00100 (36%) | 200 OK [http://test.host/locations]
+  [4;36;1mLocation Load (0.000438)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#destroy (for 0.0.0.0 at 2008-05-13 09:25:30) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000394)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+  [4;36;1mLocation Destroy (0.000357)[0m   [0;1m DELETE FROM locations
+ WHERE "id" = 335569437
+[0m
+Redirected to http://test.host/locations
+Completed in 0.00180 (555 reqs/sec) | DB: 0.00119 (66%) | 302 Found [http://test.host/locations/335569437]
+  [4;35;1mLocation Load (0.000866)[0m   [0mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#update (for 0.0.0.0 at 2008-05-13 09:25:30) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"335569437", "controller"=>"locations"}
+  [4;36;1mLocation Load (0.000468)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Redirected to http://test.host/locations
+Completed in 0.00125 (801 reqs/sec) | DB: 0.00133 (106%) | 302 Found [http://test.host/locations/335569437]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:25:30) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Redirected to http://test.host/locations
+Completed in 0.00047 (2141 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/locations]
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:25:30) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"25543", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000277)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '25543') LIMIT 1[0m
+Redirected to http://test.host/locations
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x11ecc00 @filter=:find_location>] rendered_or_redirected.
+Completed in 0.00113 (882 reqs/sec) | DB: 0.00028 (24%) | 302 Found [http://test.host/locations/25543/edit]
+
+
+Processing LocationsController#create (for 0.0.0.0 at 2008-05-13 09:25:30) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00197)
+Completed in 0.00449 (222 reqs/sec) | Rendering: 0.00417 (92%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations]
+  [4;36;1mLocation Load (0.000477)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+
+
+Processing LocationsController#edit (for 0.0.0.0 at 2008-05-13 09:25:30) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"335569437", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.047812)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '335569437') LIMIT 1[0m
+Rendering locations/edit
+Rendered locations/_form (0.00071)
+Completed in 0.05143 (19 reqs/sec) | Rendering: 0.00292 (5%) | DB: 0.04829 (93%) | 200 OK [http://test.host/locations/335569437/edit]
+  [4;36;1mLocation Load (0.000579)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 422094564) [0m
+
+
+Processing LocationsController#show (for 0.0.0.0 at 2008-05-13 09:25:30) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"422094564", "controller"=>"locations"}
+  [4;35;1mLocation Load (0.000447)[0m   [0mSELECT * FROM locations WHERE (locations."id" = '422094564') LIMIT 1[0m
+Rendering locations/show
+Completed in 0.00224 (447 reqs/sec) | Rendering: 0.00099 (44%) | DB: 0.00103 (45%) | 200 OK [http://test.host/locations/422094564]
+
+
+Processing LocationsController#new (for 0.0.0.0 at 2008-05-13 09:25:30) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"locations"}
+Rendering locations/new
+Rendered locations/_form (0.00073)
+Completed in 0.00227 (441 reqs/sec) | Rendering: 0.00196 (86%) | DB: 0.00000 (0%) | 200 OK [http://test.host/locations/new]
+  [4;36;1mLocation Load (0.000556)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+  [4;36;1mLocation Load (0.000568)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+  [4;36;1mLocation Load (0.000540)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+Google geocoding. Address: 611 Davis Avenue Eau Claire,WI. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>611 Davis Avenue Eau Claire,WI</name><Status><code>610</code><request>geocode</request></Status></Response></kml>
+Google was unable to geocode address: 611 Davis Avenue Eau Claire,WI
+Geocoder.us geocoding. Address: 611 Davis Avenue Eau Claire,WI. Result: 44.820603,-91.482660,611 Davis Ave,Eau Claire,WI,54703
+  [4;35;1mLocation Load (0.000000)[0m   [0mSQLite3::SQLException: near "adapter": syntax error: SELECT *, unhandled sqlite adapter AS distance FROM locations LIMIT 1[0m
+  [4;36;1mLocation Load (0.000540)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+Google geocoding. Address: 611 Davis Avenue Eau Claire,WI. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>611 Davis Avenue Eau Claire,WI</name><Status><code>610</code><request>geocode</request></Status></Response></kml>
+Google was unable to geocode address: 611 Davis Avenue Eau Claire,WI
+  [4;36;1mLocation Load (0.000410)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+Google geocoding. Address: 611 Davis Avenue Eau Claire,WI. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>611 Davis Avenue Eau Claire,WI</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>611 Davis Ave, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>611 Davis Ave</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.482575,44.820682,0</coordinates></Point></Placemark></Response></kml>
+  [4;36;1mLocation Load (0.000819)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+Google geocoding. Address: 611 Davis Avenue Eau Claire,WI. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>611 Davis Avenue Eau Claire,WI</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>611 Davis Ave, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>611 Davis Ave</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.482575,44.820682,0</coordinates></Point></Placemark></Response></kml>
+  [4;36;1mLocation Load (0.000456)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+Google geocoding. Address: 611 Davis Avenue Eau Claire,WI. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>611 Davis Avenue Eau Claire,WI</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>611 Davis Ave, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>611 Davis Ave</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.482575,44.820682,0</coordinates></Point></Placemark></Response></kml>
+  [4;36;1mLocation Load (0.000577)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+Google geocoding. Address: 611 Davis Avenue Eau Claire,WI. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>611 Davis Avenue Eau Claire,WI</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>611 Davis Ave, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>611 Davis Ave</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.482575,44.820682,0</coordinates></Point></Placemark></Response></kml>
+  [4;36;1mLocation Load (0.000598)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+Google geocoding. Address: 611 Davis Avenue Eau Claire,WI. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>611 Davis Avenue Eau Claire,WI</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>611 Davis Ave, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>611 Davis Ave</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.482575,44.820682,0</coordinates></Point></Placemark></Response></kml>
+  [4;36;1mLocation Load (0.000700)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+Google geocoding. Address: 611 Davis Avenue Eau Claire,WI. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>611 Davis Avenue Eau Claire,WI</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>611 Davis Ave, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>611 Davis Ave</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.482575,44.820682,0</coordinates></Point></Placemark></Response></kml>
+  [4;36;1mLocation Load (0.000614)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+Google geocoding. Address: 611 Davis Avenue Eau Claire,WI. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>611 Davis Avenue Eau Claire,WI</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>611 Davis Ave, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>611 Davis Ave</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.482575,44.820682,0</coordinates></Point></Placemark></Response></kml>
+  [4;36;1mLocation Load (0.000668)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+Google geocoding. Address: 611 Davis Avenue Eau Claire,WI. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>611 Davis Avenue Eau Claire,WI</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>611 Davis Ave, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>611 Davis Ave</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.482575,44.820682,0</coordinates></Point></Placemark></Response></kml>
+Google geocoding. Address: 216 S. Michigan St. Eau Claire,WI. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St. Eau Claire,WI</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.533813,44.797213,0</coordinates></Point></Placemark></Response></kml>
+  [4;36;1mLocation Load (0.000432)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 335569437) [0m
+Google geocoding. Address: 611 Davis Avenue Eau Claire,WI 54703. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>611 Davis Avenue Eau Claire,WI 54703</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>611 Davis Ave, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>611 Davis Ave</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.482575,44.820682,0</coordinates></Point></Placemark></Response></kml>
+Google geocoding. Address: 216 S. Michigan St.. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St.</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, South Bend, IN 46601, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>St Joseph</SubAdministrativeAreaName><Locality><LocalityName>South Bend</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46601</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.250310,41.674809,0</coordinates></Point></Placemark><Placemark id="p2"><address>216 S Michigan St, Plymouth, IN 46563, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Marshall</SubAdministrativeAreaName><Locality><LocalityName>Plymouth</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46563</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.308733,41.339125,0</coordinates></Point></Placemark><Placemark id="p3"><address>216 S Michigan St, Redlands, CA 92373, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Bernardino</SubAdministrativeAreaName><Locality><LocalityName>Redlands</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>92373</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-117.187084,34.049874,0</coordinates></Point></Placemark><Placemark id="p4"><address>216 S Michigan St, Burlington, IN 46920, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Carroll</SubAdministrativeAreaName><Locality><LocalityName>Burlington</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46920</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.394996,40.485236,0</coordinates></Point></Placemark><Placemark id="p5"><address>216 S Michigan St, Seattle, WA 98108, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>King</SubAdministrativeAreaName><Locality><LocalityName>Seattle</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>98108</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-122.331078,47.544898,0</coordinates></Point></Placemark><Placemark id="p6"><address>216 S Michigan St, Prairie du Chien, WI 53821, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Crawford</SubAdministrativeAreaName><Locality><LocalityName>Prairie du Chien</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>53821</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.143707,43.050102,0</coordinates></Point></Placemark><Placemark id="p7"><address>216 S Michigan St, Argos, IN 46501, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Marshall</SubAdministrativeAreaName><Locality><LocalityName>Argos</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46501</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.244393,41.235759,0</coordinates></Point></Placemark></Response></kml>
+  [4;35;1mLocation Create (0.000538)[0m   [0mINSERT INTO locations ("city", "name", "postal_code", "updated_at", "lng", "street", "lat", "created_at", "state") VALUES('Eau Claire', NULL, '54703', '2008-05-13 10:10:01', -86.25031, '216 S. Michigan St.', 41.674809, '2008-05-13 10:10:01', 'WI')[0m
+  [4;36;1mLocation Load (0.000641)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 422094564) [0m
+Google geocoding. Address: 216 S. Michigan St. Eau Claire,WI 54703. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St. Eau Claire,WI 54703</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.533813,44.797213,0</coordinates></Point></Placemark></Response></kml>
+Google geocoding. Address: 216 S. Michigan St.. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St.</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, South Bend, IN 46601, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>St Joseph</SubAdministrativeAreaName><Locality><LocalityName>South Bend</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46601</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.250310,41.674809,0</coordinates></Point></Placemark><Placemark id="p2"><address>216 S Michigan St, Plymouth, IN 46563, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Marshall</SubAdministrativeAreaName><Locality><LocalityName>Plymouth</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46563</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.308733,41.339125,0</coordinates></Point></Placemark><Placemark id="p3"><address>216 S Michigan St, Redlands, CA 92373, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Bernardino</SubAdministrativeAreaName><Locality><LocalityName>Redlands</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>92373</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-117.187084,34.049874,0</coordinates></Point></Placemark><Placemark id="p4"><address>216 S Michigan St, Burlington, IN 46920, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Carroll</SubAdministrativeAreaName><Locality><LocalityName>Burlington</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46920</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.394996,40.485236,0</coordinates></Point></Placemark><Placemark id="p5"><address>216 S Michigan St, Seattle, WA 98108, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>King</SubAdministrativeAreaName><Locality><LocalityName>Seattle</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>98108</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-122.331078,47.544898,0</coordinates></Point></Placemark><Placemark id="p6"><address>216 S Michigan St, Prairie du Chien, WI 53821, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Crawford</SubAdministrativeAreaName><Locality><LocalityName>Prairie du Chien</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>53821</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.143707,43.050102,0</coordinates></Point></Placemark><Placemark id="p7"><address>216 S Michigan St, Argos, IN 46501, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Marshall</SubAdministrativeAreaName><Locality><LocalityName>Argos</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46501</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.244393,41.235759,0</coordinates></Point></Placemark></Response></kml>
+  [4;35;1mLocation Create (0.000545)[0m   [0mINSERT INTO locations ("city", "name", "postal_code", "updated_at", "lng", "street", "lat", "created_at", "state") VALUES('Eau Claire', NULL, '54703', '2008-05-13 10:10:21', -86.25031, '216 S. Michigan St.', 41.674809, '2008-05-13 10:10:21', 'WI')[0m
+Google geocoding. Address: 216 S. Michigan St.. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St.</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, South Bend, IN 46601, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>St Joseph</SubAdministrativeAreaName><Locality><LocalityName>South Bend</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46601</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.250310,41.674809,0</coordinates></Point></Placemark><Placemark id="p2"><address>216 S Michigan St, Plymouth, IN 46563, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Marshall</SubAdministrativeAreaName><Locality><LocalityName>Plymouth</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46563</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.308733,41.339125,0</coordinates></Point></Placemark><Placemark id="p3"><address>216 S Michigan St, Redlands, CA 92373, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Bernardino</SubAdministrativeAreaName><Locality><LocalityName>Redlands</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>92373</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-117.187084,34.049874,0</coordinates></Point></Placemark><Placemark id="p4"><address>216 S Michigan St, Burlington, IN 46920, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Carroll</SubAdministrativeAreaName><Locality><LocalityName>Burlington</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46920</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.394996,40.485236,0</coordinates></Point></Placemark><Placemark id="p5"><address>216 S Michigan St, Seattle, WA 98108, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>King</SubAdministrativeAreaName><Locality><LocalityName>Seattle</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>98108</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-122.331078,47.544898,0</coordinates></Point></Placemark><Placemark id="p6"><address>216 S Michigan St, Prairie du Chien, WI 53821, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Crawford</SubAdministrativeAreaName><Locality><LocalityName>Prairie du Chien</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>53821</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.143707,43.050102,0</coordinates></Point></Placemark><Placemark id="p7"><address>216 S Michigan St, Argos, IN 46501, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Marshall</SubAdministrativeAreaName><Locality><LocalityName>Argos</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46501</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.244393,41.235759,0</coordinates></Point></Placemark></Response></kml>
+  [4;36;1mLocation Create (0.000563)[0m   [0;1mINSERT INTO locations ("city", "name", "postal_code", "updated_at", "lng", "street", "lat", "created_at", "state") VALUES('Eau Claire', NULL, '54703', '2008-05-13 10:10:59', -86.25031, '216 S. Michigan St.', 41.674809, '2008-05-13 10:10:59', 'WI')[0m
+  [4;36;1mLocation Load (0.000620)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 422094564) [0m
+Google geocoding. Address: 216 S. Michigan St. Eau Claire,WI 54703. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St. Eau Claire,WI 54703</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.533813,44.797213,0</coordinates></Point></Placemark></Response></kml>
+Google geocoding. Address: 216 S. Michigan St.. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St.</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, South Bend, IN 46601, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>St Joseph</SubAdministrativeAreaName><Locality><LocalityName>South Bend</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46601</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.250310,41.674809,0</coordinates></Point></Placemark><Placemark id="p2"><address>216 S Michigan St, Plymouth, IN 46563, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Marshall</SubAdministrativeAreaName><Locality><LocalityName>Plymouth</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46563</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.308733,41.339125,0</coordinates></Point></Placemark><Placemark id="p3"><address>216 S Michigan St, Redlands, CA 92373, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Bernardino</SubAdministrativeAreaName><Locality><LocalityName>Redlands</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>92373</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-117.187084,34.049874,0</coordinates></Point></Placemark><Placemark id="p4"><address>216 S Michigan St, Burlington, IN 46920, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Carroll</SubAdministrativeAreaName><Locality><LocalityName>Burlington</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46920</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.394996,40.485236,0</coordinates></Point></Placemark><Placemark id="p5"><address>216 S Michigan St, Seattle, WA 98108, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>King</SubAdministrativeAreaName><Locality><LocalityName>Seattle</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>98108</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-122.331078,47.544898,0</coordinates></Point></Placemark><Placemark id="p6"><address>216 S Michigan St, Prairie du Chien, WI 53821, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Crawford</SubAdministrativeAreaName><Locality><LocalityName>Prairie du Chien</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>53821</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.143707,43.050102,0</coordinates></Point></Placemark><Placemark id="p7"><address>216 S Michigan St, Argos, IN 46501, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Marshall</SubAdministrativeAreaName><Locality><LocalityName>Argos</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46501</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.244393,41.235759,0</coordinates></Point></Placemark></Response></kml>
+  [4;35;1mLocation Create (0.000539)[0m   [0mINSERT INTO locations ("city", "name", "postal_code", "updated_at", "lng", "street", "lat", "created_at", "state") VALUES('Eau Claire', NULL, '54703', '2008-05-13 10:12:26', -86.25031, '216 S. Michigan St.', 41.674809, '2008-05-13 10:12:26', 'WI')[0m
+Google geocoding. Address: 216 S. Michigan St. Eau Claire,WI 54703. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St. Eau Claire,WI 54703</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.533813,44.797213,0</coordinates></Point></Placemark></Response></kml>
+Google geocoding. Address: 216 S. Michigan St.. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St.</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, South Bend, IN 46601, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>St Joseph</SubAdministrativeAreaName><Locality><LocalityName>South Bend</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46601</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.250310,41.674809,0</coordinates></Point></Placemark><Placemark id="p2"><address>216 S Michigan St, Plymouth, IN 46563, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Marshall</SubAdministrativeAreaName><Locality><LocalityName>Plymouth</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46563</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.308733,41.339125,0</coordinates></Point></Placemark><Placemark id="p3"><address>216 S Michigan St, Redlands, CA 92373, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Bernardino</SubAdministrativeAreaName><Locality><LocalityName>Redlands</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>92373</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-117.187084,34.049874,0</coordinates></Point></Placemark><Placemark id="p4"><address>216 S Michigan St, Burlington, IN 46920, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Carroll</SubAdministrativeAreaName><Locality><LocalityName>Burlington</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46920</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.394996,40.485236,0</coordinates></Point></Placemark><Placemark id="p5"><address>216 S Michigan St, Seattle, WA 98108, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>King</SubAdministrativeAreaName><Locality><LocalityName>Seattle</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>98108</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-122.331078,47.544898,0</coordinates></Point></Placemark><Placemark id="p6"><address>216 S Michigan St, Prairie du Chien, WI 53821, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Crawford</SubAdministrativeAreaName><Locality><LocalityName>Prairie du Chien</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>53821</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.143707,43.050102,0</coordinates></Point></Placemark><Placemark id="p7"><address>216 S Michigan St, Argos, IN 46501, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>IN</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Marshall</SubAdministrativeAreaName><Locality><LocalityName>Argos</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>46501</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-86.244393,41.235759,0</coordinates></Point></Placemark></Response></kml>
+  [4;36;1mLocation Create (0.000575)[0m   [0;1mINSERT INTO locations ("city", "name", "postal_code", "updated_at", "lng", "street", "lat", "created_at", "state") VALUES('Eau Claire', NULL, '54703', '2008-05-13 10:12:53', -86.25031, '216 S. Michigan St.', 41.674809, '2008-05-13 10:12:53', 'WI')[0m
+Google geocoding. Address: 216 S. Michigan St. Eau Claire,WI 54703. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St. Eau Claire,WI 54703</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.533813,44.797213,0</coordinates></Point></Placemark></Response></kml>
+Google geocoding. Address: 216 S. Michigan St. Eau Claire,WI 54703. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St. Eau Claire,WI 54703</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.533813,44.797213,0</coordinates></Point></Placemark></Response></kml>
+  [4;36;1mLocation Create (0.000548)[0m   [0;1mINSERT INTO locations ("city", "name", "postal_code", "updated_at", "lng", "street", "lat", "created_at", "state") VALUES('Eau Claire', NULL, '54703', '2008-05-13 10:19:39', -91.533813, '216 S. Michigan St.', 44.797213, '2008-05-13 10:19:39', 'WI')[0m
+  [4;36;1mLocation Load (0.002219)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 422094564) [0m
+Google geocoding. Address: 216 S. Michigan St. Eau Claire,WI 54703. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St. Eau Claire,WI 54703</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.533813,44.797213,0</coordinates></Point></Placemark></Response></kml>
+Google geocoding. Address: 216 S. Michigan St. Eau Claire,WI 54703. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St. Eau Claire,WI 54703</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.533813,44.797213,0</coordinates></Point></Placemark></Response></kml>
+Google geocoding. Address: 216 S. Michigan St. Eau Claire,WI 54703. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St. Eau Claire,WI 54703</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.533813,44.797213,0</coordinates></Point></Placemark></Response></kml>
+  [4;35;1mLocation Create (0.000532)[0m   [0mINSERT INTO locations ("city", "name", "postal_code", "updated_at", "lng", "street", "lat", "created_at", "state") VALUES('Eau Claire', NULL, '54703', '2008-05-13 10:19:59', -91.533813, '216 S. Michigan St.', 44.797213, '2008-05-13 10:19:59', 'WI')[0m
+  [4;36;1mLocation Load (0.000596)[0m   [0;1mSELECT * FROM locations WHERE (locations."id" = 422094564) [0m
+Google geocoding. Address: 216 S. Michigan St. Eau Claire,WI 54703. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St. Eau Claire,WI 54703</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.533813,44.797213,0</coordinates></Point></Placemark></Response></kml>
+Google geocoding. Address: 216 S. Michigan St. Eau Claire,WI 54703. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St. Eau Claire,WI 54703</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.533813,44.797213,0</coordinates></Point></Placemark></Response></kml>
+Google geocoding. Address: 216 S. Michigan St. Eau Claire,WI 54703. Result: <?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.0"><Response><name>216 S. Michigan St. Eau Claire,WI 54703</name><Status><code>200</code><request>geocode</request></Status><Placemark id="p1"><address>216 S Michigan St, Eau Claire, WI 54703, USA</address><AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Eau Claire</SubAdministrativeAreaName><Locality><LocalityName>Eau Claire</LocalityName><Thoroughfare><ThoroughfareName>216 S Michigan St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>54703</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails><Point><coordinates>-91.533813,44.797213,0</coordinates></Point></Placemark></Response></kml>
+  [4;35;1mLocation Create (0.000535)[0m   [0mINSERT INTO locations ("city", "name", "postal_code", "updated_at", "lng", "street", "lat", "created_at", "state") VALUES('Eau Claire', NULL, '54703', '2008-05-13 10:21:02', -91.533813, '216 S. Michigan St.', 44.797213, '2008-05-13 10:21:02', 'WI')[0m

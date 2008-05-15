@@ -1,0 +1,8 @@
+<h1>New location</h1>
+
+<% form_for(@location, :url => locations_url) do |f| %>
+  <%= render :partial => 'form' , :locals=>{:f => f}%>
+  <%= submit_tag "Add" %>
+<% end %>
+
+<%= link_to 'Back', locations_path %>

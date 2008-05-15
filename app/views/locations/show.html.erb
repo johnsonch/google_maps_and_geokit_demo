@@ -1,0 +1,15 @@
+<h1><%= @location.name %></h1>
+
+  <% map = GoogleMap.new 
+	map.markers << GoogleMapMarker.new(	:map => map,
+										:lat => @location.lat, 
+										:lng => @location.lng, 
+										:html => marker_html(@location))%>
+  
+<%= map.to_html %>
+  <div style="width: 500px; height: 500px;">
+    <%= map.div %>
+  </div>
+<br /> <br />
+
+<%= link_to "Back To Locations", locations_url %>

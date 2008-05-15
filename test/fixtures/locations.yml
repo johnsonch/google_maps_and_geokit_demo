@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+chris:
+  name: Chris' House
+  street: 216 S. Michigan St.
+  city: Eau Claire
+  postal_code: 54703
+  state: WI
+
+brian:
+  name: Brian's House
+  street: 611 Davis Avenue
+  city: Eau Claire
+  postal_code: 54703
+  state: WI
